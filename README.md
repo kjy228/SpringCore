@@ -1,3 +1,4 @@
-# SpringExam
+# SpringStudy
 
-hello
+이 곳은 인프런 스프링 강의를 듣고 복습하는 저의 공간입니다.
+(_ _)b
