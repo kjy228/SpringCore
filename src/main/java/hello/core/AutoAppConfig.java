@@ -16,5 +16,4 @@ import org.springframework.context.annotation.FilterType;
         // 만약 지정하지 않으면 @ComponentScan 이 붙은 설정 정보 클래스의 패키지가 시작 위치가 된다
 )
 public class AutoAppConfig {
-
 }
