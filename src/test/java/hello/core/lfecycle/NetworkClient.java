@@ -1,6 +1,9 @@
 package hello.core.lfecycle;
 
-public class NetworkClient {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class NetworkClient implements InitializingBean, DisposableBean {
     private String url;
 
     public NetworkClient(){
@@ -27,4 +30,16 @@ public class NetworkClient {
         System.out.println("close: " + url);
     }
 
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        connect();
+        call("초기화 연결 메시지");
+
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("NetworkClient.destroy");
+        disconnect();
+    }
 }
