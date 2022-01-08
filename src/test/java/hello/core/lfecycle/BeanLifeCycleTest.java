@@ -20,7 +20,7 @@ public class BeanLifeCycleTest {
     @Configuration
     static class LifeCycleConfig {
         // 호출된 결과 값이 스프링 빈에 등록됨
-        @Bean
+        @Bean(initMethod = "init", destroyMethod = "close")
         public NetworkClient networkClient(){
             NetworkClient networkClient = new NetworkClient();
             networkClient.setUrl("http://hello-kjy.dev");
